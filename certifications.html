@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" class="certifications-page">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="about-page">
+    <div class="overlay"></div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <title>Certifications</title>
+    <style>
+        /* Style specific to the Certifications page */
+        body.certifications-page {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        h1.certifications-title {
+            margin-top: 20px;
+            font-size: 2.5rem;
+            color: #f9f9f9;
+        }
+
+        .certifications-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px auto;
+            max-width: 800px;
+        }
+
+        .certifications-gallery a {
+            display: inline-block;
+        }
+
+        .certifications-gallery img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 2px solid #ccc;
+            object-fit: cover;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .certifications-gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="certifications-page">
+    <h1 class="certifications-title"></h1>
+    <div class="certifications-gallery">
+        <a href="https://www.credly.com/badges/ff84b2f6-b5c3-437b-9522-1700f83f4337/public_url" target="_blank">
+            <img src="../MYWEBSITE/IMAGES/az900.png" alt="AZ-900">
+        </a>
+        <a href="https://www.credly.com/badges/f2b257a8-b1df-417c-995f-77833f3a745a/public_url" target="_blank">
+            <img src="../MYWEBSITE/IMAGES/dp900.webp" alt="DP-900">
+        </a>
+        <a href="https://www.credly.com/badges/7173f90a-0185-4577-b676-50e75131e08d/public_url" target="_blank">
+            <img src="../MYWEBSITE/IMAGES/sc900.png" alt="SC-900">
+        </a>
+        <a href="https://learn.microsoft.com/api/credentials/share/en-us/ManokaPitjeng-7024/86F6AC018C9F35D0?sharingId=A85CCD5C839C3AB" target="_blank">
+            <img src="../MYWEBSITE/IMAGES/sc300.png" alt="SC-300">
+        </a>
+        <a href="https://learn.microsoft.com/api/credentials/share/en-us/ManokaPitjeng-7024/394B3FD56A62B995?sharingId=A85CCD5C839C3AB" target="_blank">
+            <img src="../MYWEBSITE/IMAGES/sc200.png" alt="SC-200">
+        </a>
+    </div>
+</body>
+</html>

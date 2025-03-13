@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" class="index-page">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - My Portfolio</title>
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> <!-- Your existing CSS -->
+    <style>
+        /* CSS for the infinite typing effect */
+        .typing-effect {
+            font-size: 40px;
+            font-family: 'Courier New', Courier, monospace;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            border-right: 1px solid white; /* Smaller blinking cursor */
+            animation: typing 6s steps(40) infinite, blink-caret 0.75s step-end infinite;
+            display: inline-block; /* Ensure the cursor aligns with the text */
+        }
+
+        /* Typing animation */
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        /* Cursor blinking effect */
+        @keyframes blink-caret {
+            50% {
+                border-color: transparent;
+            }
+        }
+    </style>
+</head>
+<body class="index-page">
+    <div class="overlay"></div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <!-- Name and Position Section -->
+        <div class="intro">
+            <h1 id="name">MANOKA PITJENG</h1>
+            <h2 id="position">Aspiring SOC Analyst Cybersecurity Analyst Software Engineer</h2>
+        </div>
+
+        <!-- LinkedIn and GitHub Icons and Download CV Section -->
+        <div class="social-links">
+            <!-- LinkedIn Icon -->
+            <a href="https://www.linkedin.com/in/manoka-pitjeng-3218212ba" target="_blank">
+                <i class="fab fa-linkedin" style="font-size: 36px; margin: 10px;"></i>
+            </a>
+
+            <!-- GitHub Icon -->
+            <a href="https://github.com/manokapitjeng" target="_blank">
+                <i class="fab fa-github" style="font-size: 36px; margin: 10px;"></i>
+            </a>
+
+            <!-- Download CV Button -->
+            <a href="../MYWEBSITE/MANOKA_PITJENG-CV.pdf" download="MANOKA_PITJENG-CV" class="download-cv" style="font-size: 18px; text-decoration: none; background-color: #4CAF50; color: white; padding: 10px 20px; border-radius: 5px; margin-top: 20px; display: inline-block;">
+                Download CV
+            </a>
+        </div>
+    </div>
+
+    <!-- JavaScript for typing effect with a 5-second delay and blinking cursor -->
+    <script>
+        const nameElement = document.getElementById('name');
+        const text = 'MANOKA PITJENG';
+        let i = 0;
+
+        function typeName() {
+            nameElement.textContent = '';  // Clear the name text
+            i = 0;  // Reset typing index
+            const typingInterval = setInterval(() => {
+                if (i < text.length) {
+                    nameElement.textContent += text.charAt(i);
+                    i++;
+                } else {
+                    clearInterval(typingInterval);  // Stop typing
+                    setTimeout(() => {
+                        nameElement.textContent = text;  // Show full name for a while
+                        setTimeout(() => {
+                            nameElement.textContent = '';  // Clear the name again
+                            typeName();  // Restart typing after a 5-second wait
+                        }, 5000);  // Wait 5 seconds before restarting
+                    }, 5000);  // Wait 5 seconds after typing the full name
+                }
+            }, 300);  // Adjust typing speed to slower (300ms per character)
+        }
+
+        typeName();  // Start typing the name on page load
+    </script>
+
+    <!-- JavaScript to adjust name and position font size -->
+    <script>
+        function adjustFontSize() {
+            const width = window.innerWidth;
+            const nameElement = document.getElementById('name');
+            const positionElement = document.getElementById('position');
+            
+            // Adjust font sizes based on screen width
+            if (width >= 1200) {
+                nameElement.style.fontSize = '40px';
+                positionElement.style.fontSize = '20px';
+            } else if (width >= 768) {
+                nameElement.style.fontSize = '30px';
+                positionElement.style.fontSize = '15px';
+            } else {
+                nameElement.style.fontSize = '20px';
+                positionElement.style.fontSize = '10px';
+            }
+        }
+
+        // Adjust font size on load and on window resize
+        window.addEventListener('load', adjustFontSize);
+        window.addEventListener('resize', adjustFontSize);
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
